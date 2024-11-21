@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Voice Agent Dashboard",
-  description: "P101",
+  title: "Nefeli AI Ticket Dashboard",
+  description: "Comfytechs",
 };
 
 export default function RootLayout({

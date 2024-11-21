@@ -198,7 +198,7 @@ export function DashboardComponent() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Hotel Helpdesk Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-4">Nefeli AI Ticket Dashboard</h1>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 space-y-4 md:space-y-0">
         <Dialog>
