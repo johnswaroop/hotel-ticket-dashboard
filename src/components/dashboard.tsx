@@ -78,31 +78,52 @@ const statusConfig = {
 const placeholderTickets: Ticket[] = [
   {
     id: 1,
-    title: "Room 101 AC not working",
-    description: "The air conditioning in Room 101 is not cooling properly.",
+    title: "Inquiry about room availability",
+    description:
+      "A customer wants to check availability for a deluxe room from 12th to 15th June.",
     priority: "High",
     status: "Open",
-    createdAt: new Date(2023, 5, 1, 14, 30),
-    assignedTo: "John Doe",
+    createdAt: new Date(2023, 5, 1, 10, 45),
+    assignedTo: "Sarah Lee",
   },
   {
     id: 2,
-    title: "Lobby WiFi issues",
-    description: "Guests are reporting slow internet speeds in the lobby area.",
-    priority: "Medium",
+    title: "Banquet hall booking inquiry",
+    description:
+      "A guest wants to book the banquet hall for a wedding on 20th July, seating for 150 guests.",
+    priority: "High",
     status: "In Progress",
-    createdAt: new Date(2023, 5, 2, 9, 15),
-    assignedTo: "Jane Smith",
+    createdAt: new Date(2023, 5, 2, 15, 30),
+    assignedTo: "David Clarke",
   },
   {
     id: 3,
-    title: "Restock mini bar in Room 205",
+    title: "Inquiry about spa packages",
     description:
-      "The mini bar in Room 205 needs to be restocked with beverages and snacks.",
+      "A customer is asking about spa package details for a group of 4 people.",
+    priority: "Medium",
+    status: "Open",
+    createdAt: new Date(2023, 5, 3, 11, 11),
+    assignedTo: "Emily Turner",
+  },
+  {
+    id: 4,
+    title: "Restaurant reservation request",
+    description: "A guest wants to reserve a table for 4 at 8 PM on 10th June.",
     priority: "Low",
     status: "Open",
-    createdAt: new Date(2023, 5, 3, 11, 45),
-    assignedTo: "Mike Johnson",
+    createdAt: new Date(2023, 5, 3, 12, 15),
+    assignedTo: "John Doe",
+  },
+  {
+    id: 5,
+    title: "Room pricing inquiry",
+    description:
+      "A guest is inquiring about pricing for an executive suite for a corporate stay.",
+    priority: "Medium",
+    status: "Open",
+    createdAt: new Date(2023, 5, 4, 14, 20),
+    assignedTo: "Jane Smith",
   },
 ];
 
@@ -500,7 +521,9 @@ export function DashboardComponent() {
               <TableRow key={ticket.id}>
                 <TableCell>{ticket.id}</TableCell>
                 <TableCell>{ticket.title}</TableCell>
-                <TableCell>{ticket.description}</TableCell>
+                <TableCell className="max-w-[500px]">
+                  {ticket.description}
+                </TableCell>
                 <TableCell>
                   <Select
                     onValueChange={(value) =>
